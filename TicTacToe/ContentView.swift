@@ -73,8 +73,10 @@ class ModelBoard {
         }
     }
 
-    //check possible winning move and block it
-    //if no winning move to block calculate best move to win game
+    //check for a move that will make .o win the game
+    //if none check possible winning move for .x and block it
+    //if no winning move to block calculate best move closer to winning
+    // this is done by the minimax algorithm
 
     private func getWinner(_ indexes: [Int]) -> BoardCellStatus? {
         var homeCounter:Int = 0
